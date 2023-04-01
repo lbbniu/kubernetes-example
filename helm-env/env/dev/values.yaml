@@ -1,3 +1,3 @@
 frontend:
-  image: lyzhang1999/frontend
+  image: lbbniu-docker.pkg.coding.net/docker/lbbniu/frontend
   tag: latest-env

@@ -1,13 +1,13 @@
 helm:
   parameters:
   - name: frontend.image
-    value: lyzhang1999/frontend
+    value: lbbniu-docker.pkg.coding.net/docker/lbbniu/frontend
     forcestring: true
   - name: frontend.tag
     value: "2682590"
     forcestring: true
   - name: backend.image
-    value: lyzhang1999/backend
+    value: lbbniu-docker.pkg.coding.net/docker/lbbniu/backend
     forcestring: true
   - name: backend.tag
     value: "2682590"

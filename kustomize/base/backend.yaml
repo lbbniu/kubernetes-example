@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-backend
-        image: lyzhang1999/backend:latest
+        image: lbbniu-docker.pkg.coding.net/docker/lbbniu/backend:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
@@ -34,7 +34,7 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "256m"
-        readinessProbe: 
+        readinessProbe:
           httpGet:
             path: /healthy
             port: 5000
@@ -44,7 +44,7 @@ spec:
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 1
-        livenessProbe: 
+        livenessProbe:
           httpGet:
             path: /healthy
             port: 5000
@@ -53,7 +53,7 @@ spec:
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 1
-        startupProbe: 
+        startupProbe:
           httpGet:
             path: /healthy
             port: 5000
