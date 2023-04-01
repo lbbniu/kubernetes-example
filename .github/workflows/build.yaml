@@ -52,11 +52,11 @@ jobs:
           changes: |
             {
               "helm/values.yaml": {
-                "helm.parameters.1.value": "${{ steps.vars.outputs.sha_short }}",
-                "helm.parameters.3.value": "${{ steps.vars.outputs.sha_short }}"
-              },
-              ".argocd-source-example.yaml": {
                 "backend.tag": "${{ steps.vars.outputs.sha_short }}",
                 "frontend.tag": "${{ steps.vars.outputs.sha_short }}"
+              },
+              "helm/.argocd-source-example.yaml": {
+                "helm.parameters.1.value": "${{ steps.vars.outputs.sha_short }}",
+                "helm.parameters.3.value": "${{ steps.vars.outputs.sha_short }}"
               }
             }
