@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Set outputs
         id: vars
-        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
@@ -45,12 +45,12 @@ jobs:
       - name: Update helm values.yaml
         uses: fjogeleit/yaml-update-action@main
         with:
-         valueFile: 'helm/values.yaml'
-         commitChange: true
-         branch: main
-         message: 'Update Image Version to ${{ steps.vars.outputs.sha_short }}'
-         changes: |
-           {
-             "backend.tag": "${{ steps.vars.outputs.sha_short }}",
-             "frontend.tag": "${{ steps.vars.outputs.sha_short }}"
-           }
+          valueFile: 'helm/values.yaml'
+          commitChange: true
+          branch: main
+          message: 'Update Image Version to ${{ steps.vars.outputs.sha_short }}'
+          changes: |
+            {
+              "backend.tag": "${{ steps.vars.outputs.sha_short }}",
+              "frontend.tag": "${{ steps.vars.outputs.sha_short }}"
+            }
