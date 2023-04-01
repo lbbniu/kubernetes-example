@@ -3,7 +3,7 @@ name: build-every-branch
 on:
   push:
     branches:
-      - '*'
+      - 'argocd'
 
 env:
   CODING_REGISTRY: lbbniu-docker.pkg.coding.net/docker/lbbniu
