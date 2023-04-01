@@ -1,14 +1,14 @@
 helm:
   parameters:
-  - name: frontend.image
-    value: lbbniu-docker.pkg.coding.net/docker/lbbniu/frontend
-    forcestring: true
-  - name: frontend.tag
-    value: "2682590"
-    forcestring: true
-  - name: backend.image
-    value: lbbniu-docker.pkg.coding.net/docker/lbbniu/backend
-    forcestring: true
-  - name: backend.tag
-    value: "2682590"
-    forcestring: true
+    - name: frontend.image
+      value: lbbniu-docker.pkg.coding.net/docker/lbbniu/frontend
+      forcestring: true
+    - name: frontend.tag
+      value: 62ec254
+      forcestring: true
+    - name: backend.image
+      value: lbbniu-docker.pkg.coding.net/docker/lbbniu/backend
+      forcestring: true
+    - name: backend.tag
+      value: 62ec254
+      forcestring: true

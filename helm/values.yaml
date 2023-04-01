@@ -1,11 +1,11 @@
 frontend:
   image: lbbniu-docker.pkg.coding.net/docker/lbbniu/frontend
-  tag: 9c0e5b1
+  tag: 62ec254
   autoscaling:
     averageUtilization: 90
 backend:
   image: lbbniu-docker.pkg.coding.net/docker/lbbniu/backend
-  tag: 9c0e5b1
+  tag: 62ec254
   autoscaling:
     averageUtilization: 90
 database:
