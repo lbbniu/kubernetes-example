@@ -3,7 +3,7 @@ name: build
 on:
   push:
     branches:
-      - "main"
+      - "dev"
 
 env:
   CODING_REGISTRY: lbbniu-docker.pkg.coding.net/docker/lbbniu
